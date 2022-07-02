@@ -17,8 +17,15 @@ const DUMMY_MEETUPS = [
   },
 ];
 
-const HomePage = () => (
-  <MeetupList meetups={DUMMY_MEETUPS} />
-);
+const HomePage = ({ meetups }) => <MeetupList meetups={meetups} />;
+
+export async function getStaticProps() {
+  // fetch data from an API
+  return {
+    props: {
+      meetups: DUMMY_MEETUPS,
+    },
+  };
+}
 
 export default HomePage;

@@ -9,7 +9,7 @@ const NewMeetupForm = ({ onAddMeetup }) => {
   const addressInputRef = useRef();
   const descriptionInputRef = useRef();
 
-  function submitHandler(event) {
+  const submitHandler = (event) => {
     event.preventDefault();
 
     const enteredTitle = titleInputRef.current.value;
@@ -25,34 +25,34 @@ const NewMeetupForm = ({ onAddMeetup }) => {
     };
 
     onAddMeetup(meetupData);
-  }
+  };
 
   return (
     <Card>
       <form className={classes.form} onSubmit={submitHandler}>
         <div className={classes.control}>
-          <label htmlFor="title">Meetup Title</label>
-          <input type="text" required id="title" ref={titleInputRef} />
+          <label htmlFor="meetupTitle">Meetup Title</label>
+          <input id="meetupTitle" ref={titleInputRef} type="text" required />
         </div>
         <div className={classes.control}>
-          <label htmlFor="image">Meetup Image</label>
-          <input type="url" required id="image" ref={imageInputRef} />
+          <label htmlFor="meetupImage">Meetup Image</label>
+          <input id="meetupImage" ref={imageInputRef} type="url" required />
         </div>
         <div className={classes.control}>
-          <label htmlFor="address">Address</label>
-          <input type="text" required id="address" ref={addressInputRef} />
+          <label htmlFor="meetupAddress">Address</label>
+          <input id="meetupAddress" ref={addressInputRef} type="text" required />
         </div>
         <div className={classes.control}>
-          <label htmlFor="description">Description</label>
+          <label htmlFor="meetupDescription">Description</label>
           <textarea
-            id="description"
+            id="meetupDescription"
+            ref={descriptionInputRef}
             required
             rows="5"
-            ref={descriptionInputRef}
           />
         </div>
         <div className={classes.actions}>
-          <button type="button">Add Meetup</button>
+          <button type="submit">Add Meetup</button>
         </div>
       </form>
     </Card>

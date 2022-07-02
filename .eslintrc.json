@@ -19,7 +19,7 @@
     "plugins": [
         "react"
     ],
-    "rules" : {
+    "rules": {
         "quotes": [
             "error",
             "double"
@@ -28,10 +28,23 @@
         "react/prop-types": "off",
         "no-console": "off",
         "no-shadow": "off",
-        "react/function-component-definition": [2, { "namedComponents": "arrow-function" }],
+        "react/function-component-definition": [
+            2,
+            {
+                "namedComponents": "arrow-function"
+            }
+        ],
         "react/jsx-uses-react": "off",
         "react/react-in-jsx-scope": "off",
-        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+        "react/jsx-filename-extension": [
+            1,
+            {
+                "extensions": [
+                    ".js",
+                    ".jsx"
+                ]
+            }
+        ],
         "react/jsx-props-no-spreading": "off"
     }
 }

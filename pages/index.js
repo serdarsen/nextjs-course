@@ -17,6 +17,8 @@ const DUMMY_MEETUPS = [
   },
 ];
 
-const HomePage = () => <MeetupList meetups={DUMMY_MEETUPS} />;
+const HomePage = () => (
+  <MeetupList meetups={DUMMY_MEETUPS} />
+);
 
 export default HomePage;
